@@ -2,6 +2,6 @@
     <string name="app_name">Four Button App</string>
     <string name="red">Red</string>
     <string name="green">Green</string>
-    <string name="black">Black</string>
+    <string name="blue">Blue</string>
     <string name="yellow">Yellow</string>
 </resources>

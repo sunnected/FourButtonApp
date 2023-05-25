@@ -21,23 +21,18 @@ class MainActivity : AppCompatActivity() {
         constraintLayout = findViewById(R.id.constraintLayout)
         red = findViewById(R.id.red)
         green = findViewById(R.id.green)
-        blue = findViewById(R.id.black)
+        blue = findViewById(R.id.blue)
         yellow = findViewById(R.id.yellow)
 
-        // onclick listener for red
-        red.setOnClickListener {
-            constraintLayout.setBackgroundResource(R.color.red)
+        // onclick listener for all buttons
+        red.setOnClickListener { changeColor(R.color.red) }
+        green.setOnClickListener { changeColor(R.color.green) }
+        blue.setOnClickListener { changeColor(R.color.blue) }
+        yellow.setOnClickListener { changeColor(R.color.yellow) }
+    }
 
-        }
-
-        // onclick listener for red
-        green.setOnClickListener { constraintLayout.setBackgroundResource(R.color.green) }
-
-        // onclick listener for red
-        blue.setOnClickListener { constraintLayout.setBackgroundResource(R.color.blue) }
-
-        // onclick listener for red
-        yellow.setOnClickListener { constraintLayout.setBackgroundResource(R.color.yellow) }
-
+    private fun changeColor(color: Int) {
+        window.statusBarColor = getColor(color)
+        constraintLayout.setBackgroundResource(color)
     }
 }
